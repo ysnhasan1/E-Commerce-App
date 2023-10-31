@@ -1,0 +1,129 @@
+#details-heading {
+    margin-top: 6rem;
+}
+
+#single-product-container {
+    width: 90%;
+    margin-left: 5%;
+
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#single-product-container>.flex-item>img {
+    border-radius: 10px;
+    box-shadow: 0 0 1px 3px #9d174d;
+    width: 30rem;
+    height: 30rem;
+    padding: 1rem;
+    object-fit: contain;
+}
+
+#single-product-container>#details {
+    padding: 1rem;
+    position: relative;
+}
+
+#single-product-container>#details>#brand {
+    font-size: 2rem;
+    color: #9d174d;
+}
+
+#single-product-container>#details>#title {
+    font-size: 1.4rem;
+}
+
+#single-product-container>#details>#description {
+    font-size: 1.1rem;
+    padding: 2rem 0;
+}
+
+#single-product-container>#details>span {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#price-container {
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#price-container>#price {
+    font-size: 2.5rem;
+}
+
+#price-container>#price>span {
+    color: #9d174d;
+    margin-right: 3px;
+}
+
+button {
+    color: white;
+    background-color: #9d174d;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+
+    #single-product-container {
+        width: 96%;
+        margin-left: 2%;
+        padding: 4rem 0;
+    }
+
+    #single-product-container>.flex-item>img {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    #single-product-container>#details {
+        padding: 0.3rem;
+    }
+}
+
+@media (max-width: 860px) {
+
+    #single-product-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        width: 90%;
+        margin-left: 5%;
+        padding: 1rem;
+    }
+
+    #single-product-container>.flex-item>img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    #price-container {
+        position: static;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #single-product-container>.flex-item>img {
+        width: 16rem;
+        height: 16rem;
+    }
+}

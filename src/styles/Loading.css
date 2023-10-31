@@ -1,0 +1,23 @@
+#loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    height: 100vh;
+}
+
+/* uiverse */
+#loading-container>.loader {
+    width: 4em;
+    height: 4em;
+    border: 0.3em solid rgb(84, 84, 84);
+    border-left-color: #a23ffc;
+    border-radius: 100%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

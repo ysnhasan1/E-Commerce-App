@@ -1,0 +1,49 @@
+#navbar-container {
+    background-color: #252B48;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    z-index: 99;
+}
+
+#navbar-container>#icon {
+    color: white;
+    font-size: 2.5rem;
+    padding: 0.4rem 1.8rem;
+}
+
+#navbar-container>#icon>#icon-in-div:hover {
+    cursor: pointer;
+}
+
+#navbar-container>#hand-bag {
+    position: absolute;
+    top: 1.3rem;
+    right: 2.6rem;
+    color: white;
+    font-size: 2rem;
+}
+
+#navbar-container>#hand-bag:hover {
+    cursor: pointer;
+    color: #9d174d;
+}
+
+#navbar-container>#number-of-products {
+    /* navbarda başlangıç değeri 0 olan değişkeni tutuyor. */
+
+    position: absolute;
+    top: 3.2rem;
+    right: 1.6rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 320px) {
+
+    #navbar-container>#number-of-products {
+        right: 1.4rem;
+    }
+}
