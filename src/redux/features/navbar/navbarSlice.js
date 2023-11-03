@@ -53,7 +53,7 @@ export const navbarSlice = createSlice({
                 state.value.splice(index, 1); // Sepetten bu indeksi kullanarak 1 öğeyi çıkarır.
 
                 storeInLocalStorage(state.value);
-                toast.success("Products are removed!");
+                toast.success("Product is removed!");
             }
         },
 
