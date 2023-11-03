@@ -22,7 +22,7 @@ function App() {
   // Sayfa yüklendiğinde ürünler axios ile çekilecek.
   useEffect(() => {
     dispatch(getProducts());
-  }, [])
+  }, [dispatch])
 
   const loading = useSelector(state => state.productsReducer.loading);
 
