@@ -1,42 +1,33 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import SingleProduct from "./SingleProduct";
-import ZeroDetail from "./ZeroDetail";
+import { getDetails } from "../redux/features/details/detailsSlice";
 
 function Details() {
 
-    const params = useParams(); // Products.jsx' ten navaigate ile geleni burada karşılıyoruz.
+    const params = useParams(); // Products.jsx' ten navigate ile geleni burada karşılıyoruz.
 
     // console.log(params); // returns an object such as {id: '3'}
     // console.log(params.id); // returns 3 (depends on params)
 
-    const products = useSelector(state => state.productsReducer.value); // products is an array
+    const dispatch = useDispatch();
 
-    const [getProduct, setGetProduct] = useState({});
-
-    // Sayfa yüklendiğinde yapılacak işlemleri useEffect ile belirtiyoruz.
+    // Sayfa yüklendiğinde gelen id' ye göre ürün çekilecek.
     useEffect(() => {
+        dispatch(getDetails(params.id));
+    }, [dispatch, params.id]);
 
-        // Eğer gelen bir ürün ismi varsa işlemi yap. (kontrollü)
-        if (params.id) {
-            setGetProduct(products.find((eachProduct) => eachProduct.id == params.id)); // getProduct = product that I clicked on it.
-        }
+    const productDetails = useSelector(state => state.detailsReducer.value);
 
-    }, [params.id]); // "params.id" her güncellendiğinde useEffect içini yeniden çalıştır.
+    const loading = useSelector(state => state.detailsReducer.loading);
 
     return (
         <div>
             <h1 id="details-heading">DETAILS</h1>
 
-            {getProduct ? <SingleProduct id={getProduct?.id} thumbnail={getProduct?.thumbnail} category={getProduct?.category} brand={getProduct?.brand} title={getProduct?.title} description={getProduct?.description} price={getProduct?.price} /> :
-                <ZeroDetail />
-            }
+            {loading ? <div style={{ textAlign: "center", marginTop: "200px" }}>Loading...</div> : <SingleProduct productDetails={productDetails} />}
 
-            {/* Her bir özellik önce ? ile kontrol edilir. 
-                Eğer getProduct mevcut değilse veya herhangi bir özelliği mevcut değilse, 
-                bu özelliklere erişim hatası vermez ve undefined döner. 
-                Bu sayede uygulama çalışmaya devam edebilir ve hata oluşma riski azaltılır. */}
         </div>
     )
 };
