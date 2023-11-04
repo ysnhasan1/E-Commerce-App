@@ -28,13 +28,12 @@ Feel free to share your observations with me.
 
 https://hasan-e-commerce.netlify.app/
 
-
 ## Screenshots
 <div align="center">
   
 `Loading Screen`
 
-<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/1ff52573-a162-46e9-81e3-543ab57060da"><br /><hr />
+<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/1ff52573-a162-46e9-81e3-543ab57060da"><br />
 
 `Home Page`
 
@@ -46,7 +45,7 @@ https://hasan-e-commerce.netlify.app/
 
 <img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/e7f91421-5e63-40e9-8058-c750c85d60d4"><br />
 
-<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/62f36174-f48b-4e23-9b19-d27dfdba1814"><br /><hr />
+<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/62f36174-f48b-4e23-9b19-d27dfdba1814"><br />
 
 `Details Page`
 
@@ -67,15 +66,21 @@ https://hasan-e-commerce.netlify.app/
 
 ## Responsive to Smaller Screen Size (Phone View)
 <div align="center">
-<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/595fa0b5-5dc0-40da-9025-22d669424b03" height="500">
+<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/7743dbab-6f79-4556-9563-f19a70a6891c" height="450">
 
-<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/21c1ff39-7002-450b-8729-e236fcaa22cd" height="500">
+<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/cd0f300b-e0ad-4bdb-a661-e7be1a47f01e" height="450">
 
 </br> 
 
-<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/d08cbc27-a0ef-405c-b78b-fe5ff47a9f65" height="500">
+<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/be6c6b3c-f461-458d-80d2-44769b0fbbc5" height="450">
 
-<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/ebd198be-0479-4ab4-80c1-eabab311db52" height="500">
+<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/0156c640-be69-48f4-9f0c-b827e5bfd53a" height="450">
+
+</br> 
+
+<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/50f2bc33-5764-4e13-b6d4-eab3c0b87a3f" height="450">
+
+<img src="https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/475cd1e8-af8e-4bad-b9d9-23aa819ea991" height="450">
 </div>
 
 ## Npm
