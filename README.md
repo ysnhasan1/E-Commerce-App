@@ -15,7 +15,7 @@ The navbar shows the number of products in the cart that we can access on each p
 
 * Another important point of the project is routing between pages. `React Router` was used for this.
 
-* The website is responsive to all screen sizes.
+* `The website is responsive to all screen sizes.`
 
 ## Main Technologies For The Project
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
