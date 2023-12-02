@@ -15,6 +15,8 @@ The navbar shows the number of products in the cart that we can access on each p
 
 * Another important point of the project is routing between pages. `React Router` was used for this.
 
+* `Local Storage: Products in the cart are not deleted when the page is refreshed.`
+
 * `The website is responsive to all screen sizes.`
 
 ## Main Technologies For The Project
