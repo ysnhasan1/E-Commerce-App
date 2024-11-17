@@ -46,7 +46,7 @@ const Products = () => {
                                     <div className="d-flex justify-content-between align-items-center w-100 p-2">
                                         <div className='fs-3'>
                                             <span className='me-1 fw-bold'>$</span>
-                                            <span className="text-warning fw-bold">{product?.price.toFixed(1)}</span>
+                                            <span className="text-warning fw-bold">{product?.price?.toFixed(1)}</span>
                                         </div>
                                         <BsCart4 className="shopping-cart fs-3" onClick={() => dispatch(add(product))} />
                                     </div>

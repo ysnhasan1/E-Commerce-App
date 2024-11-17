@@ -6,11 +6,11 @@ import { totalPrice } from "../helpers/totalPrice.js"
 
 const OrderSummary = ({ products }) => {
 
-    const subTotal = totalPrice(products).toFixed(1)
+    const subTotal = totalPrice(products)?.toFixed(1)
 
-    const discount = (totalPrice(products).toFixed(1) * (0.1)).toFixed(2)
+    const discount = (totalPrice(products)?.toFixed(1) * (0.1))?.toFixed(2)
 
-    const total = (totalPrice(products).toFixed(1) - totalPrice(products).toFixed(2) * (0.1)).toFixed(2)
+    const total = (totalPrice(products)?.toFixed(1) - totalPrice(products)?.toFixed(2) * (0.1))?.toFixed(2)
 
     return (
         <div className='border border-1 rounded fs-5 p-3 mb-4'>

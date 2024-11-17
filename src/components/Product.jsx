@@ -58,7 +58,7 @@ const Product = ({ product }) => {
                             <div className="d-flex align-items-center">
                                 <div className='fs-3'>
                                     <span className='me-1 fw-bold'>$</span>
-                                    <span className="text-warning fw-bold">{product?.price.toFixed(1)}</span>
+                                    <span className="text-warning fw-bold">{product?.price?.toFixed(1)}</span>
                                 </div>
                                 <div className="discount fw-bold mx-3 px-2 py-1">-{product?.discountPercentage}%</div>
                             </div>

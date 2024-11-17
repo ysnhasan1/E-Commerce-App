@@ -41,7 +41,7 @@ const Orders = () => {
                             <div className='fs-5 mb-3'>
                                 <span>Price per product: </span>
                                 <span className='me-1 fw-bold'>$</span>
-                                <span className="text-warning fw-bold">{product?.price.toFixed(1)}</span>
+                                <span className="text-warning fw-bold">{product?.price?.toFixed(1)}</span>
                             </div>
 
                             <div className="d-flex edit border border-1 py-1 px-2 fw-bold mb-3">
@@ -54,7 +54,7 @@ const Orders = () => {
                                 <div className='d-flex justify-content-end gap-2 align-items-center'>
                                     <div className='fs-5'>
                                         <span className='me-1 fw-bold'>$</span>
-                                        <span className='text-warning fw-bold'>{(product?.price * product?.quantity).toFixed(1)}</span>
+                                        <span className='text-warning fw-bold'>{(product?.price * product?.quantity)?.toFixed(1)}</span>
                                     </div>
                                 </div>
                             </div>
