@@ -1,14 +1,15 @@
-import React from "react";
+// React
+import React from "react"
 
-import "../styles/Loading.css";
+// CSS
+import "../styles/Loading.css"
 
-function Loading() {
+const Loading = () => {
     return (
-        <div id="loading-container">
-            {/* uiverse */}
+        <div className="d-flex justify-content-center align-items-center mt-5">
             <div className="loader"></div>
         </div>
     )
-};
+}
 
-export default Loading;
+export default Loading

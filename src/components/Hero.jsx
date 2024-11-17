@@ -1,14 +1,15 @@
-import React from "react";
-import HeroImg from "../../assets/hero.png";
+// React
+import React from "react"
 
-import "../styles/Hero.css";
+// Image
+import HeroImg from "../../assets/hero.png"
 
-function Hero() {
+const Hero = () => {
     return (
-        <div id="hero-container">
-            <img src={HeroImg} alt="hero image" />
+        <div className="container d-flex justify-content-center align-items-center">
+            <img className="img-fluid w-75" src={HeroImg} alt="hero image" />
         </div>
     )
-};
+}
 
-export default Hero;
+export default Hero

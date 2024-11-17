@@ -1,43 +1,39 @@
-import React from "react";
-import { BsHandbag } from 'react-icons/bs';
-import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { TbBrandHexo } from 'react-icons/tb';
+// React
+import React from "react"
 
-import "../styles/Navbar.css";
+// React Router Dom
+import { Link } from 'react-router-dom'
 
-function Navbar() {
+// Redux
+import { useSelector } from 'react-redux'
 
-    const products = useSelector(state => state.navbarReducer.value); // products is an array
+// React Icons
+import { BsCart4 } from "react-icons/bs"
 
-    // Sepetteki toplam ürün sayısını hesaplama (navbarda göstermek için)
-    function numberOfProducts() {
-        let number = 0;
-        for (let i = 0; i < products.length; i++) {
-            number += products[i].quantity;
-        }
-        return number;
-    }
+// Function
+import { numberOfProducts } from "../helpers/numberOfProducts"
 
-    const navigate = useNavigate();
+// CSS
+import "../styles/Navbar.css"
 
-    function handleClickIcon() {
-        navigate("/");
-        window.scroll({ top: 0, behavior: 'smooth' });
-    }
+const Navbar = () => {
 
-    function handleClickHandBag() {
-        navigate("/shoppingCart");
-        window.scroll({ top: 0, behavior: 'smooth' });
-    }
+    const products = useSelector(state => state.navbarReducer.value)
 
     return (
-        <div id="navbar-container">
-            <div id="icon"><TbBrandHexo id="icon-in-div" onClick={handleClickIcon} /></div>
-            <BsHandbag id="hand-bag" onClick={handleClickHandBag} />
-            <div id="number-of-products">{numberOfProducts()}</div>
+        <div className="nav-container sticky-top">
+            <nav className="container d-flex justify-content-between align-items-center p-3">
+                <Link to={"/"} onClick={() => window.scrollTo(0, 0)} className="logo">Home</Link>
+
+                <div>
+                    <Link to={"/cart"} onClick={() => window.scrollTo(0, 0)}>
+                        <BsCart4 className="cart text-white" />
+                    </Link>
+                    <span className="badge text-bg-warning">{numberOfProducts(products)}</span>
+                </div>
+            </nav>
         </div>
     )
-};
+}
 
-export default Navbar;
+export default Navbar

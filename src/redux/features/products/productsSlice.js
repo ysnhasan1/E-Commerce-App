@@ -1,18 +1,19 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+
+// Axios
+import axios from "axios"
 
 const initialState = {
     loading: false,
-    value: [], // empty array
+    value: [],
     error: ""
 }
 
 export const getProducts = createAsyncThunk("getProducts", async () => {
-    const response = await axios.get("https://dummyjson.com/products");
-    // console.log(response);
-    // console.log(response.data);
-    // console.log(response.data.products); // Returns a 20-element array where each element is an object.
-    return response.data.products;
+    const response = await axios.get("https://dummyjson.com/products")
+    const products = response.data.products
+    const filteredProducts = products.filter(product => product.title !== "Chicken Meat" && product.title !== "Calvin Klein CK One" && product.title !== "Dolce Shine Eau de")
+    return filteredProducts
 })
 
 export const productsSlice = createSlice({
@@ -20,19 +21,19 @@ export const productsSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(getProducts.pending, (state, action) => {
-            state.loading = true;
+        builder.addCase(getProducts.pending, (state) => {
+            state.loading = true
         })
 
         builder.addCase(getProducts.fulfilled, (state, action) => {
-            state.loading = false;
-            state.value = action.payload; // api'den gelen verileri value'ya doldurma işlemi
+            state.loading = false
+            state.value = action.payload
         })
 
-        builder.addCase(getProducts.rejected, (state, action) => {
+        builder.addCase(getProducts.rejected, (state) => {
             state.error = "Bad fetching!"
         })
     }
-});
+})
 
-export default productsSlice.reducer;
+export default productsSlice.reducer

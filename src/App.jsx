@@ -1,47 +1,47 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "./redux/features/products/productsSlice";
+// React
+import React, { useEffect } from "react"
+
+// React Router Dom
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+// Redux
+import { useDispatch, useSelector } from "react-redux"
+import { getProducts } from "./redux/features/products/productsSlice"
+
+// Toast
+import { Toaster } from 'react-hot-toast'
 
 // Components
-import Navbar from "./components/Navbar";
-import Loading from "./components/Loading";
-import Products from "./components/Products";
-import Details from "./components/Details";
-import ShoppingCart from "./components/ShoppingCart";
+import Navbar from "./components/Navbar"
+import Loading from "./components/Loading"
+import Products from "./components/Products"
+import Details from "./components/Details"
+import Cart from "./components/Cart"
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// CSS
+import "../src/styles/App.css"
 
-import { Toaster } from 'react-hot-toast';
+const App = () => {
 
-import "../src/styles/App.css";
+  const dispatch = useDispatch()
 
-function App() {
-
-  const dispatch = useDispatch();
-
-  // Sayfa yüklendiğinde ürünler axios ile çekilecek.
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getProducts())
   }, [dispatch])
 
-  const loading = useSelector(state => state.productsReducer.loading);
+  const loading = useSelector(state => state.productsReducer.loading)
 
   return (
-
     <Router>
-
       <Toaster />
-
       <Navbar />
-
       <Routes>
         <Route path="/" element={loading ? <Loading /> : <Products />} />
         <Route path="/details/:id" element={<Details />} /> {/* "id" dinamik olarak değişeceği için ":" kullandık.  */}
-        <Route path="/shoppingCart" element={<ShoppingCart />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
-
     </Router>
   )
-};
+}
 
-export default App;
+export default App

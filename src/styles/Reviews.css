@@ -1,0 +1,6 @@
+.reviewer-name {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

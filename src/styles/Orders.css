@@ -1,0 +1,34 @@
+.trash-icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s linear;
+    color: black !important;
+}
+
+.edit {
+    border-radius: 62px;
+    width: max-content;
+}
+
+.minus:hover,
+.plus:hover {
+    cursor: pointer;
+    color: #ffc107;
+}
+
+.quantity-greater-than-two {
+    color: rgb(197, 192, 192) !important;
+    cursor: default !important;
+}
+
+.cart-product-bottom {
+    bottom: 0;
+    right: 15px;
+    width: max-content;
+}
+
+@media (max-width: 768px) {
+    .cart-product-image {
+        width: 40%;
+    }
+}

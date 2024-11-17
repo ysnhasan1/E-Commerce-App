@@ -1,16 +1,10 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: white;
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Nova Square', sans-serif;
+    box-sizing: border-box;
+    font-family: "Ysabeau Infant", sans-serif;
 }
 
-h1 {
-    text-align: center;
-    letter-spacing: 2.5px;
-    margin: 20px 0;
+a {
+    text-decoration: none;
 }

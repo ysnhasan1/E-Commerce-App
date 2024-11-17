@@ -1,35 +1,38 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import SingleProduct from "./SingleProduct";
-import { getDetails } from "../redux/features/details/detailsSlice";
+// React
+import React, { useEffect } from "react"
 
-function Details() {
+// React Router Dom
+import { useParams } from "react-router-dom"
 
-    const params = useParams(); // Products.jsx' ten navigate ile geleni burada karşılıyoruz.
+// Redux
+import { useDispatch, useSelector } from "react-redux"
+import { getDetails } from "../redux/features/details/detailsSlice"
 
-    // console.log(params); // returns an object such as {id: '3'}
-    // console.log(params.id); // returns 3 (depends on params)
+// Atoms
+import H1 from "../atoms/H1"
 
-    const dispatch = useDispatch();
+// Components
+import Loading from './Loading'
+import Product from "./Product"
 
-    // Sayfa yüklendiğinde gelen id' ye göre ürün çekilecek.
+const Details = () => {
+
+    const params = useParams()
+    const dispatch = useDispatch()
+
+    const loading = useSelector(state => state.detailsReducer.loading)
+    const product = useSelector(state => state.detailsReducer.value)
+
     useEffect(() => {
-        dispatch(getDetails(params.id));
-    }, [dispatch, params.id]);
-
-    const productDetails = useSelector(state => state.detailsReducer.value);
-
-    const loading = useSelector(state => state.detailsReducer.loading);
+        dispatch(getDetails(params.id))
+    }, [dispatch, params.id])
 
     return (
         <div>
-            <h1 id="details-heading">DETAILS</h1>
-
-            {loading ? <div style={{ textAlign: "center", marginTop: "200px" }}>Loading...</div> : <SingleProduct productDetails={productDetails} />}
-
+            <H1 title="Details" className="text-center" />
+            {loading ? <Loading /> : <Product product={product} />}
         </div>
     )
-};
+}
 
-export default Details;
+export default Details

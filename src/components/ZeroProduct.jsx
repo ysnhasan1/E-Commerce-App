@@ -1,15 +1,16 @@
-import React from "react";
-import { ImSad } from "react-icons/im";
+// React
+import React from "react"
 
-import "../styles/ZeroProduct.css";
+// React Icons
+import { ImSad } from "react-icons/im"
 
-function ZeroProduct() {
+const ZeroProduct = () => {
     return (
-        <div id="zero-product-container">
-            <h4>There is no product in your cart!</h4>
-            <ImSad id="sad-icon" />
+        <div className="d-flex flex-column justify-content-center align-items-center mt-5 fs-3">
+            <p className="text-muted">There is no product in your cart!</p>
+            <ImSad className="text-warning" />
         </div>
     )
-};
+}
 
-export default ZeroProduct;
+export default ZeroProduct
