@@ -54,7 +54,7 @@ const Orders = () => {
                                 <div className='d-flex justify-content-end gap-2 align-items-center'>
                                     <div className='fs-5'>
                                         <span className='me-1 fw-bold'>$</span>
-                                        <span className='text-warning fw-bold'>{(product?.price * product?.quantity)?.toFixed(1)}</span>
+                                        <span className='text-warning fw-bold'>{(product?.price?.toFixed(1) * product?.quantity)?.toFixed(1)}</span>
                                     </div>
                                 </div>
                             </div>
