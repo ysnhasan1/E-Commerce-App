@@ -1,8 +1,13 @@
+.product-brand-or-title {
+    color: #384B70;
+}
+
+.trash-icon {
+    color: #B8001F;
+}
+
 .trash-icon:hover {
     cursor: pointer;
-    transform: scale(1.1);
-    transition: 0.2s linear;
-    color: black !important;
 }
 
 .edit {
@@ -13,7 +18,6 @@
 .minus:hover,
 .plus:hover {
     cursor: pointer;
-    color: #ffc107;
 }
 
 .quantity-greater-than-two {
@@ -23,7 +27,7 @@
 
 .cart-product-bottom {
     bottom: 0;
-    right: 15px;
+    right: 7px;
     width: max-content;
 }
 

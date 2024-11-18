@@ -1,5 +1,20 @@
+.product-brand,
+.product-title,
+.product-price,
+.product-tag {
+    color: #384B70;
+}
+
+.add-btn {
+    background-color: #384B70;
+}
+
+.add-btn:hover {
+    background-color: #507687;
+}
+
 .discount {
-    color: #ff3333;
+    color: #B8001F;
     background-color: #ff33331a;
     border-radius: 62px;
 }

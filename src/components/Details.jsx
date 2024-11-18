@@ -8,9 +8,6 @@ import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { getDetails } from "../redux/features/details/detailsSlice"
 
-// Atoms
-import H1 from "../atoms/H1"
-
 // Components
 import Loading from './Loading'
 import Product from "./Product"
@@ -29,7 +26,6 @@ const Details = () => {
 
     return (
         <div>
-            <H1 title="Details" className="text-center" />
             {loading ? <Loading /> : <Product product={product} />}
         </div>
     )

@@ -27,9 +27,9 @@ const Navbar = () => {
 
                 <div>
                     <Link to={"/cart"} onClick={() => window.scrollTo(0, 0)}>
-                        <BsCart4 className="cart text-white" />
+                        <BsCart4 className="cart me-1" />
                     </Link>
-                    <span className="badge text-bg-warning">{numberOfProducts(products)}</span>
+                    <span className="badge badge-bg-color">{numberOfProducts(products)}</span>
                 </div>
             </nav>
         </div>

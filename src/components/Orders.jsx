@@ -33,15 +33,15 @@ const Orders = () => {
                         <div className="col-12 col-md-9 p-1">
                             <div className='d-flex justify-content-between align-items-center mb-1'>
                                 <div>
-                                    <div className="fw-bold text-warning fs-4">{product?.brand ? product?.brand : product?.title}</div>
+                                    <div className="fw-bold product-brand-or-title fs-4">{product?.brand ? product?.brand : product?.title}</div>
                                 </div>
-                                <FaTrash className='text-danger fs-4 trash-icon' onClick={() => dispatch(remove(product?.id))} />
+                                <FaTrash className='fs-4 trash-icon' onClick={() => dispatch(remove(product?.id))} />
                             </div>
 
-                            <div className='fs-5 mb-3'>
+                            <div className='mb-3'>
                                 <span>Price per product: </span>
                                 <span className='me-1 fw-bold'>$</span>
-                                <span className="text-warning fw-bold">{product?.price?.toFixed(1)}</span>
+                                <span className="product-price fw-bold">{product?.price?.toFixed(1)}</span>
                             </div>
 
                             <div className="d-flex edit border border-1 py-1 px-2 fw-bold mb-3">
@@ -54,7 +54,7 @@ const Orders = () => {
                                 <div className='d-flex justify-content-end gap-2 align-items-center'>
                                     <div className='fs-5'>
                                         <span className='me-1 fw-bold'>$</span>
-                                        <span className='text-warning fw-bold'>{(product?.price?.toFixed(1) * product?.quantity)?.toFixed(1)}</span>
+                                        <span className='product-price fw-bold'>{(product?.price?.toFixed(1) * product?.quantity)?.toFixed(1)}</span>
                                     </div>
                                 </div>
                             </div>

@@ -1,15 +1,22 @@
 .nav-container {
-    background-color: #12162a;
+    background-color: #384B70;
 }
 
-nav .logo,
-.cart {
-    font-size: 30px;
-    color: white;
+nav .logo {
+    font-size: 20px;
+    color: #FCFAEE;
+}
+
+nav .cart {
+    font-size: 24px;
+    color: #FCFAEE;
 }
 
 nav a:hover,
 .cart:hover {
     cursor: pointer;
-    color: #ffc107 !important;
+}
+
+.badge-bg-color {
+    background-color: #507687;
 }

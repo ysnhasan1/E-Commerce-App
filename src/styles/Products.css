@@ -15,11 +15,14 @@
     text-overflow: ellipsis;
 }
 
+.product .price {
+    color: #384B70;
+}
+
 .product .shopping-cart {
-    color: seagreen;
+    color: #384B70;
 }
 
 .product .shopping-cart:hover {
     cursor: pointer;
-    color: black;
 }
