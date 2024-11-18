@@ -24,7 +24,7 @@ const Reviews = ({ product }) => {
                                         <div className='text-warning fw-bold'>{review?.rating?.toFixed(1)}</div>
                                     </div>
                                 </div>
-                                <p className='text-muted'>❝ {review?.comment} ❞</p>
+                                <p className='text-muted'>❝ {review?.comment}</p>
                             </div>
                         </div>
                     )
