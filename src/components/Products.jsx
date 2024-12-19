@@ -38,7 +38,7 @@ const Products = () => {
                             <div className="product col-12 col-sm-6 col-md-4 col-lg-3 text-center mb-3 fs-5" key={index}>
                                 <div className="card d-flex flex-column align-items-center">
                                     <Link to={`/details/${product?.id}`}>
-                                        <img className="img-fluid w-50 my-3" src={product?.thumbnail} alt={product?.id + " image"} />
+                                        <img className="img-fluid my-3" src={product?.thumbnail} alt={product?.id + " image"} width={120} height={120} />
                                     </Link>
 
                                     <p className="title">{product?.title}</p>
