@@ -1,5 +1,9 @@
-.product-brand-or-title {
+.orders-product-title {
     color: #384B70;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
 }
 
 .trash-icon {

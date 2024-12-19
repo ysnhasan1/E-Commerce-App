@@ -19,17 +19,13 @@ const Product = ({ product }) => {
         <div className="container mt-5 pt-1">
             <div className="row">
                 <div className="col-12 col-md-5">
-                    <img className="img-fluid w-100 card mb-2" src={product?.thumbnail} alt={product?.id + " image"} />
+                    <img className="img-fluid w-100 card mb-2" src={product?.images[0]} alt={product?.id + " image"} />
                 </div>
 
                 <div className="col-12 col-md-7">
-                    {product?.brand ?
-                        <>
-                            <h2 className="fw-bold product-brand fs-1">{product?.brand}</h2>
-                            <p className="text-muted mb-4 fs-5">{product?.title}</p>
-                        </>
-                        : <h2 className="fw-bold product-title mb-4 fs-1">{product?.title}</h2>
-                    }
+
+                    <h2 className="fw-bold product-title fs-1">{product?.title}</h2>
+                    <p className="text-muted mb-4 fs-5">{product?.brand}</p>
 
                     <div>
                         {product?.tags?.map((tag, index) => {

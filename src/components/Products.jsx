@@ -41,7 +41,7 @@ const Products = () => {
                                         <img className="img-fluid w-50 my-3" src={product?.thumbnail} alt={product?.id + " image"} />
                                     </Link>
 
-                                    <p className="title">{product?.brand ? product?.brand : product?.title}</p>
+                                    <p className="title">{product?.title}</p>
 
                                     <div className="d-flex justify-content-between align-items-center w-100 p-2">
                                         <div className="fs-5">

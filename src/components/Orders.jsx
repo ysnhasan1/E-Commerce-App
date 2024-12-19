@@ -32,9 +32,7 @@ const Orders = () => {
 
                         <div className="col-12 col-md-9 p-1">
                             <div className='d-flex justify-content-between align-items-center mb-1'>
-                                <div>
-                                    <div className="fw-bold product-brand-or-title fs-4">{product?.brand ? product?.brand : product?.title}</div>
-                                </div>
+                                <div className="fw-bold orders-product-title fs-4">{product?.title}</div>
                                 <FaTrash className='fs-4 trash-icon' onClick={() => dispatch(remove(product?.id))} />
                             </div>
 
