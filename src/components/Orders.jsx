@@ -27,7 +27,11 @@ const Orders = () => {
                 return (
                     <div key={index} className="border border-1 rounded mb-3 d-md-flex p-2 position-relative">
                         <Link to={`/details/${product?.id}`} className="col-12 col-md-3 d-flex justify-content-center align-items-center">
-                            <img className="img-fluid cart-product-image mb-3" src={product?.thumbnail} alt={`${product?.id} + image`} />
+                            <img className="img-fluid cart-product-image mb-3" src={product?.thumbnail} alt={`${product?.id} + image`}
+                                width="100%"
+                                height="auto"
+                                style={{ aspectRatio: 1 }}
+                            />
                         </Link>
 
                         <div className="col-12 col-md-9 p-1">
