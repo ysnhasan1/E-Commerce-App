@@ -19,7 +19,7 @@ const Product = ({ product }) => {
         <div className="container mt-5 pt-1">
             <div className="row">
                 <div className="col-12 col-md-5">
-                    <img className="img-fluid w-100 card mb-2" src={product?.images[0]} alt={product?.id + " image"}
+                    <img className="img-fluid w-100 card mb-2" src={product?.images?.length > 0 && product?.images[0]} alt={product?.id + " image"}
                         width="100%"
                         height="auto"
                         style={{ aspectRatio: 1 }}
