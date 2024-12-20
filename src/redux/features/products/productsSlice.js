@@ -10,7 +10,7 @@ const initialState = {
 }
 
 export const getProducts = createAsyncThunk("getProducts", async () => {
-    const response = await axios.get("https://dummyjson.com/products?limit=194")
+    const response = await axios.get("https://dummyjson.com/products?limit=120")
     const products = response.data.products
     const filteredProducts = products.filter(product => product.title !== "Chicken Meat" && product.title !== "Calvin Klein CK One" && product.title !== "Dolce Shine Eau de")
     return filteredProducts
