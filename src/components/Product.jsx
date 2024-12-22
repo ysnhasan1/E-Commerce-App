@@ -5,6 +5,11 @@ import React from "react"
 import { useDispatch } from "react-redux"
 import { add } from "../redux/features/navbar/navbarSlice"
 
+// Lazy Load
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/black-and-white.css"
+import placeholder from "../../assets/placeholder.svg"
+
 // Atoms
 import Reviews from "./Reviews"
 
@@ -19,10 +24,15 @@ const Product = ({ product }) => {
         <div className="container mt-5 pt-1">
             <div className="row">
                 <div className="col-12 col-md-5">
-                    <img className="img-fluid w-100 card mb-2" src={product?.images?.length > 0 && product?.images[0]} alt={product?.id + " image"}
+                    <LazyLoadImage
+                        src={product?.images?.length > 0 && product?.images[0]}
+                        alt={product?.id + " image"}
+                        className="img-fluid w-100 mb-2"
+                        placeholderSrc={placeholder}
+                        effect="black-and-white"
                         width="100%"
                         height="auto"
-                        style={{ aspectRatio: 1 }}
+                        style={{ color: "black", aspectRatio: 1 }}
                     />
                 </div>
 

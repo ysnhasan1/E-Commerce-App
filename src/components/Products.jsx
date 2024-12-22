@@ -11,6 +11,11 @@ import { add } from "../redux/features/navbar/navbarSlice"
 // React Icons
 import { BsCart4 } from "react-icons/bs"
 
+// Lazy Load
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/black-and-white.css"
+import placeholder from "../../assets/placeholder.svg"
+
 // Atoms
 import H1 from "../atoms/H1"
 
@@ -29,16 +34,26 @@ const Products = () => {
         <>
             <Hero />
 
-            <H1 title="Products" className="text-center" />
+            <H1 title="Products" className="text-center fs-2" />
 
             <div className="container">
                 <div className="row">
                     {products?.length > 0 && products?.map((product, index) => {
                         return (
-                            <div className="product col-12 col-sm-6 col-md-4 col-lg-3 text-center mb-3 fs-5" key={index}>
-                                <div className="card d-flex flex-column align-items-center">
+                            <div className="product col-12 col-sm-6 col-md-4 col-lg-3 text-center mb-4 fs-5" key={index}>
+                                <div className="card d-flex flex-column align-items-center border-0"
+                                    style={{ boxShadow: "rgba(0, 0, 0, 0.07) 0px 4px 12px" }}>
                                     <Link to={`/details/${product?.id}`}>
-                                        <img className="img-fluid my-3" src={product?.thumbnail} alt={product?.id + " image"} width={120} height={120} />
+                                        <LazyLoadImage
+                                            src={product?.thumbnail}
+                                            alt={product?.id + " image"}
+                                            className="img-fluid"
+                                            placeholderSrc={placeholder}
+                                            effect="black-and-white"
+                                            width="200px"
+                                            height="200px"
+                                            style={{ color: "black" }}
+                                        />
                                     </Link>
 
                                     <p className="title">{product?.title}</p>
