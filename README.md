@@ -28,7 +28,7 @@ The navbar shows the number of products in the cart that we can access on each p
 * You can visit my website by clicking the link below.
 Feel free to share your observations with me.
 
-https://hasan-e-commerce.netlify.app/
+https://hasan-e-commercee.netlify.app/
 
 ## Website Overview
 https://github.com/ysnhasan1/E-Commerce-App/assets/102024926/ab739ec9-917c-4dba-b2fd-6a2215c5dd82
